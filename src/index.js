@@ -11,6 +11,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 app.use(multer({dest: path.join(__dirname,'public','img','uploads')}).single('image'))
 
+app.use(express.static(path.join(__dirname,'public')))
 app.use(require(path.join(__dirname,'routes','index.routes.js')))
 
 app.listen(3000, () => {
