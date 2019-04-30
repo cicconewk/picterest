@@ -1,21 +1,21 @@
 const path = require('path')
 const APP_DIR = path.join(__dirname,'src','client')
-const BUILD_DIR = path.join(__dirname,'src','public')
+const BUILD_DIR = path.join(__dirname,'src','client','public')
 
 module.exports = {
-  mode: 'development',
   entry: {
-    main: APP_DIR + '/index.js'
+    main: `${APP_DIR}/index.js`
   },
   output: {
     path: BUILD_DIR,
-    filename: 'js/[name].bundle.js',
+    filename: 'assets/js/[name].bundle.js',
     publicPath: '/'
   },
   devServer: {
     contentBase: BUILD_DIR,
+    historyApiFallback: true,
     compress: true,
-    port: 80
+    port: 8080
   },
   module: {
     rules: [
