@@ -1,0 +1,18 @@
+{
+  "development": {
+    "user": "test",
+    "password": "testp4ss",
+    "database": "picterest-test",
+    "host": "ds331145.mlab.com",
+    "port": 31145,
+    "dialect": "mongodb"
+  },
+  "production": {
+    "user": "admin",
+    "password": "picterestdbp4ss",
+    "database": "picterest",
+    "host": "ds147354.mlab.com",
+    "port": 47354,
+    "dialect": "mongodb"
+  }
+}
